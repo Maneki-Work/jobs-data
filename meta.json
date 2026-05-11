@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-11T14:02:30.893Z",
+  "site_url": "https://maneki.work",
+  "counts": {
+    "total_active": 3545,
+    "posted_last_24h": 10,
+    "posted_last_7d": 225,
+    "posted_last_30d": 1050
+  },
+  "fields": [
+    "id",
+    "title",
+    "company",
+    "company_slug",
+    "logo_url",
+    "location",
+    "remote",
+    "work_mode",
+    "seniority",
+    "skills",
+    "job_url",
+    "posted_at",
+    "scraped_at",
+    "maneki_url",
+    "company_url"
+  ]
+}
