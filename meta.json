@@ -1,12 +1,13 @@
 {
-  "schema_version": 1,
-  "generated_at": "2026-05-14T10:58:34.300Z",
+  "schema_version": 2,
+  "generated_at": "2026-05-14T10:59:50.238Z",
   "site_url": "https://maneki.work",
   "counts": {
     "total_active": 3198,
     "posted_last_24h": 47,
     "posted_last_7d": 212,
-    "posted_last_30d": 915
+    "posted_last_30d": 915,
+    "with_salary": 1286
   },
   "fields": [
     "id",
@@ -22,6 +23,11 @@
     "job_url",
     "posted_at",
     "scraped_at",
+    "salary_min",
+    "salary_max",
+    "salary_currency",
+    "salary_period",
+    "salary_offers_equity",
     "maneki_url",
     "company_url"
   ]
