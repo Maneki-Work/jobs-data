@@ -1,13 +1,13 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-07-10T23:26:19.835Z",
+  "generated_at": "2026-07-11T23:14:34.093Z",
   "site_url": "https://maneki.work",
   "counts": {
-    "total_active": 2448,
-    "posted_last_24h": 9,
-    "posted_last_7d": 196,
-    "posted_last_30d": 992,
-    "with_salary": 681
+    "total_active": 2409,
+    "posted_last_24h": 0,
+    "posted_last_7d": 185,
+    "posted_last_30d": 935,
+    "with_salary": 665
   },
   "fields": [
     "id",
