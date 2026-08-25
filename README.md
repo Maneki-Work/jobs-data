@@ -1,50 +1,30 @@
-  # Maneki jobs dataset
+# Maneki — Web3 Jobs Data
 
-  Public, machine-readable export of active job listings from
-  [maneki.work](https://maneki.work) — a Web3 / crypto job aggregator.
+Live data from [maneki.work](https://www.maneki.work), the Web3 job board that aggregates every open crypto and blockchain role from top companies' career pages — normalized, deduplicated, and with stale listings removed within 24 hours.
 
-  Updated automatically every 2 hours.
+## What's in this repo
 
-  ## Files
+- **[`sample.json`](./sample.json)** — the 100 most recent active jobs, refreshed nightly. Full schema, real data: enough to evaluate quality and structure.
+- **[`meta.json`](./meta.json)** — live statistics for the full dataset (total active jobs, freshness counts, salary coverage) + schema reference, refreshed nightly.
 
-  | File | Format | Use |
-  |---|---|---|
-  | `jobs.json` | JSON array | Full dataset, one object per active job |
-  | `jobs.ndjson` | Newline-delimited JSON | Same data, one job per line (streaming-friendly) |
-  | `meta.json` | JSON object | Dataset metadata: generation timestamp, counts, schema |
+## Schema (per job)
 
-  ## Schema (jobs.json / jobs.ndjson)
+`id`, `title`, `company`, `company_slug`, `logo_url`, `location`, `remote`, `work_mode`, `seniority`, `skills[]`, `job_url` (direct application link), `posted_at`, `scraped_at`, `salary_min/max/currency/period`, `salary_offers_equity`, `maneki_url`, `company_url`
 
-  Each job has these fields:
+All fields are normalized: seniority buckets, work mode (remote/hybrid/onsite), extracted salaries, canonical company slugs, no duplicates.
 
-  - `id` — Maneki internal id
-  - `title` — job title
-  - `company`, `company_slug` — hiring company
-  - `logo_url` — company logo
-  - `location` — free-text location string
-  - `remote` — boolean
-  - `work_mode` — "remote" | "hybrid" | "onsite" | null
-  - `seniority` — "junior" | "mid" | "senior" | "lead" | null
-  - `skills` — array of skill keywords
-  - `job_url` — apply link (external ATS: Greenhouse, Lever, Ashby, etc.)
-  - `posted_at` — original posting timestamp (ISO 8601)
-  - `scraped_at` — last scrape timestamp
-  - `maneki_url` — canonical URL on maneki.work
-  - `company_url` — company page on maneki.work
+## Want the full dataset or API access?
 
-  ## Notes for AI agents
+The complete catalogue (~2,700 active jobs, nightly refresh) and programmatic access are available for **partners, researchers and agent builders**.
 
-  - **No `description` field**: full job descriptions live on the source ATS. Follow `job_url`.
-  - **No salary field**: not yet captured. Planned.
-  - Filter `posted_at >= now - 7 days` for fresh listings.
-  - `skills` is a free-text array, useful for keyword matching.
-  - All entries are `active = true` at export time. Inactive jobs are removed on next sync.
+📧 **[team@maneki.work](mailto:team@maneki.work)** — tell us your use case. We're especially interested in AI agents, job-search tools, and labor-market research.
 
-  ## License
+## Free live feeds
 
-  Data aggregated from publicly accessible company career pages. Use respectfully.
-  Attribution to [maneki.work](https://maneki.work) appreciated.
+- **RSS**: [maneki.work/feed.xml](https://www.maneki.work/feed.xml) — latest 50 jobs, hourly
+- **For LLMs/agents**: [maneki.work/llms.txt](https://www.maneki.work/llms.txt) — live counts and structured site map
+- Every job page exposes `JobPosting` JSON-LD
 
-  ## Contact
+---
 
-  [maneki.work](https://maneki.work) · [@manekijobs on Telegram](https://t.me/+HAhBYUTb1pllZDhk)
+*Maneki is independent and self-funded. Listings come from public company career pages only — no sponsored roles, no recruiter spam.*
