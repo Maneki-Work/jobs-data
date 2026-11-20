@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "generated_at": "2026-11-19T03:42:34.011Z",
+  "generated_at": "2026-11-20T03:35:30.252Z",
   "site_url": "https://maneki.work",
   "access": {
     "sample": "sample.json — 100 most recent active jobs, refreshed nightly",
@@ -8,11 +8,11 @@
     "live_feeds": "https://maneki.work/feed.xml (RSS, hourly) · https://maneki.work/llms.txt"
   },
   "counts": {
-    "total_active": 2512,
-    "posted_last_24h": 52,
-    "posted_last_7d": 277,
-    "posted_last_30d": 1114,
-    "with_salary": 750
+    "total_active": 2508,
+    "posted_last_24h": 47,
+    "posted_last_7d": 282,
+    "posted_last_30d": 1121,
+    "with_salary": 903
   },
   "fields": [
     "id",
