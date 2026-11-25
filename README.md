@@ -1,30 +1,38 @@
-# Maneki — Web3 Jobs Data
+# Maneki Web3 & Crypto Jobs Dataset
 
-Live data from [maneki.work](https://www.maneki.work), the Web3 job board that aggregates every open crypto and blockchain role from top companies' career pages — normalized, deduplicated, and with stale listings removed within 24 hours.
+An openly-licensed, continuously-updated dataset of live **Web3, crypto and
+blockchain job postings**, aggregated from company career pages and normalized
+into one clean schema.
 
-## What's in this repo
+- **2,514** active jobs · **914** with published salary
+- Last updated: `2026-11-25` (refreshed daily)
+- Landing page & docs: https://www.maneki.work/data
 
-- **[`sample.json`](./sample.json)** — the 100 most recent active jobs, refreshed nightly. Full schema, real data: enough to evaluate quality and structure.
-- **[`meta.json`](./meta.json)** — live statistics for the full dataset (total active jobs, freshness counts, salary coverage) + schema reference, refreshed nightly.
+## What's here
 
-## Schema (per job)
+| File | Description |
+|------|-------------|
+| `sample.json` | The 100 most recent active jobs (rotates daily) |
+| `meta.json` | Aggregate stats (counts, salary coverage, freshness) + field schema |
 
-`id`, `title`, `company`, `company_slug`, `logo_url`, `location`, `remote`, `work_mode`, `seniority`, `skills[]`, `job_url` (direct application link), `posted_at`, `scraped_at`, `salary_min/max/currency/period`, `salary_offers_equity`, `maneki_url`, `company_url`
+The **full dataset and API** are available for partners, researchers and agent
+builders — email team@maneki.work with your use case. Live feeds:
+[RSS](https://www.maneki.work/feed.xml) · [llms.txt](https://www.maneki.work/llms.txt) ·
+[MCP server](https://www.maneki.work/agents).
 
-All fields are normalized: seniority buckets, work mode (remote/hybrid/onsite), extracted salaries, canonical company slugs, no duplicates.
+## Schema
 
-## Want the full dataset or API access?
+Each record: `id, title, company, company_slug, logo_url, location, remote,
+work_mode, seniority, skills, job_url, posted_at, scraped_at, salary_min,
+salary_max, salary_currency, salary_period, salary_offers_equity, maneki_url,
+company_url`.
 
-The complete catalogue (~2,700 active jobs, nightly refresh) and programmatic access are available for **partners, researchers and agent builders**.
+## License
 
-📧 **[team@maneki.work](mailto:team@maneki.work)** — tell us your use case. We're especially interested in AI agents, job-search tools, and labor-market research.
+Released under [**CC BY 4.0**](https://creativecommons.org/licenses/by/4.0/).
+Free to use, share and build on — commercially too — **with attribution**.
+Please credit Maneki with a link:
 
-## Free live feeds
+> Data: Maneki Web3 Jobs Dataset (maneki.work), CC BY 4.0
 
-- **RSS**: [maneki.work/feed.xml](https://www.maneki.work/feed.xml) — latest 50 jobs, hourly
-- **For LLMs/agents**: [maneki.work/llms.txt](https://www.maneki.work/llms.txt) — live counts and structured site map
-- Every job page exposes `JobPosting` JSON-LD
-
----
-
-*Maneki is independent and self-funded. Listings come from public company career pages only — no sponsored roles, no recruiter spam.*
+See `LICENSE` for details.
