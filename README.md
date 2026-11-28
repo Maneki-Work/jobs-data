@@ -4,8 +4,8 @@ An openly-licensed, continuously-updated dataset of live **Web3, crypto and
 blockchain job postings**, aggregated from company career pages and normalized
 into one clean schema.
 
-- **2,624** active jobs · **897** with published salary
-- Last updated: `2026-11-27` (refreshed daily)
+- **2,675** active jobs · **920** with published salary
+- Last updated: `2026-11-28` (refreshed daily)
 - Landing page & docs: https://www.maneki.work/data
 
 ## What's here
